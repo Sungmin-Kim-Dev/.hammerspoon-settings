@@ -86,11 +86,8 @@ local function performSearch()
 
   -- 약간의 지연 후 검색 실행
   hs.timer.doAfter(0.2, function()
-    -- / 키 입력하여 검색 시작
-    hs.eventtap.keyStrokes("/")
-
-    -- 기존 검색어 선택 (Ctrl+A)
-    hs.eventtap.keyStroke({"cmd"}, "a")
+    -- 주소 표시줄 선택 (Ctrl+L)
+    hs.eventtap.keyStroke({"cmd"}, "l")
 
     -- 새 검색어 붙여넣기 (Command+V)
     hs.eventtap.keyStroke({"cmd"}, "v")
