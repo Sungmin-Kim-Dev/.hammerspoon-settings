@@ -11,19 +11,19 @@ function alert.styleSetup(style)
 end
 
 function alert.showHyperAlert()
-  hyperAlert = hs.alert.show("❇️ Hyper", alertStyle, 'indefinite')
+  hyperAlert = hs.alert.show("❇️ Hyper", alertStyle, hs.screen.primaryScreen(), 'indefinite')
 end
 
 function alert.showHyperQAlert()
   hs.alert.closeSpecific(hyperAlert)
-  hyperQAlert = hs.alert.show("❇️ Hyper 🟩", alertStyle, 'indefinite')
+  hyperQAlert = hs.alert.show("❇️ Hyper 🟩", alertStyle, hs.screen.primaryScreen(), 'indefinite')
 end
 
 function alert.showHyperTAlert()
   hyperTAlert = hs.alert.show("❇️ Hyper ⌨️", {
     alertStyle,
     atScreenEdge = 2
-  }, 'indefinite')
+  }, hs.screen.primaryScreen(), 'indefinite')
 end
 
 function alert.closeHyperTAlert()
